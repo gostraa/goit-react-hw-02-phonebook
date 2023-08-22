@@ -7,7 +7,7 @@ export const Contacts = ({ tel, deleteContact, filteredArr }) => {
       <ul className="col-sm-3">
         {filteredArr.map(contact => (
           <li key={contact.id}>
-            {contact.name}:{tel}
+            {contact.name} : {tel}{' '}
             <button
               type="button"
               className="btn btn-primary"
