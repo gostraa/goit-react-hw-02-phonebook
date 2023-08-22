@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 
-export const Contacts = ({ tel, deleteContact, filteredArr }) => {
+export const Contacts = ({ deleteContact, filteredArr }) => {
   return (
     <>
       <h2>Contacts</h2>
       <ul className="col-sm-3">
         {filteredArr.map(contact => (
           <li key={contact.id}>
-            {contact.name} : {tel}{' '}
+            {contact.name} : {contact.number}{' '}
             <button
               type="button"
               className="btn btn-primary"
@@ -23,7 +23,6 @@ export const Contacts = ({ tel, deleteContact, filteredArr }) => {
 };
 
 Contacts.propTypes = {
-  tel: PropTypes.string.isRequired,
   deleteContact: PropTypes.func.isRequired,
   filteredArr: PropTypes.array.isRequired,
 };
